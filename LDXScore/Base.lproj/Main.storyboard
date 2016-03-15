@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yYT-fH-TY2" customClass="LDXScore">
+                                <rect key="frame" x="87" y="319" width="200" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="MST-GQ-1Vn"/>
+                                    <constraint firstAttribute="height" constant="29" id="NvK-cf-qFM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="highlightImg" value="btn_star_evaluation_press"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="normalImg" value="btn_star_evaluation_normal"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSelect" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="max_star">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cT5-QW-wqU">
+                                <rect key="frame" x="20" y="278.5" width="335" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1h-g6-TRS">
+                                <rect key="frame" x="20" y="425.5" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CHY-Kh-lms"/>
+                                </constraints>
+                                <state key="normal" title="评分"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbt-iI-B95">
+                                <rect key="frame" x="98" y="355.5" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="bJD-B4-1JC"/>
+                                    <constraint firstAttribute="height" constant="50" id="nDu-c6-IlN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kbt-iI-B95" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="82" id="2xY-1t-Qoj"/>
+                            <constraint firstAttribute="trailing" secondItem="cT5-QW-wqU" secondAttribute="trailing" constant="20" id="7oL-F4-OOx"/>
+                            <constraint firstAttribute="trailing" secondItem="F1h-g6-TRS" secondAttribute="trailing" constant="20" id="AYh-nh-qdc"/>
+                            <constraint firstItem="F1h-g6-TRS" firstAttribute="top" secondItem="kbt-iI-B95" secondAttribute="bottom" constant="20" id="G6a-5f-bNw"/>
+                            <constraint firstItem="yYT-fH-TY2" firstAttribute="top" secondItem="cT5-QW-wqU" secondAttribute="bottom" constant="20" id="HKN-4N-oFT"/>
+                            <constraint firstItem="kbt-iI-B95" firstAttribute="top" secondItem="yYT-fH-TY2" secondAttribute="bottom" constant="8" id="RV6-L3-QQS"/>
+                            <constraint firstAttribute="centerY" secondItem="yYT-fH-TY2" secondAttribute="centerY" id="Vb8-9S-Eb7"/>
+                            <constraint firstItem="F1h-g6-TRS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="lMN-n8-DgC"/>
+                            <constraint firstItem="cT5-QW-wqU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="oNk-fB-xhv"/>
+                            <constraint firstAttribute="centerX" secondItem="yYT-fH-TY2" secondAttribute="centerX" id="wdI-s4-0e0"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="pingfen" destination="kbt-iI-B95" id="sja-hS-k3g"/>
+                        <outlet property="scoreLabel" destination="cT5-QW-wqU" id="26u-i6-eE6"/>
+                        <outlet property="submite" destination="F1h-g6-TRS" id="x5p-Bj-z6n"/>
+                        <outlet property="view1" destination="yYT-fH-TY2" id="b1l-KH-dTz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276.5" y="431.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_star_evaluation_normal" width="100" height="100"/>
+        <image name="btn_star_evaluation_press" width="100" height="100"/>
+    </resources>
+</document>
